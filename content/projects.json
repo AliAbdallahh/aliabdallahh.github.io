@@ -1,0 +1,25 @@
+[
+  {
+    "number": "01",
+    "slug": "primavera-p6-project-controls",
+    "status": "published",
+    "template": "primavera-p6",
+    "title": "Planning & Project Controls",
+    "subtitle": "Primavera P6 Case Study",
+    "type": "Independent simulated portfolio project",
+    "scope": "G+9 office building + roof",
+    "summary": "An integrated building programme from engineering and procurement through construction and handover. A detailed P6 baseline and update, supported by resource planning, earned value analysis and management reporting.",
+    "image": "presentation-cover.webp",
+    "tags": ["Primavera P6", "Baseline & CPM", "Resource leveling", "EVM & forecasting"],
+    "dataDate": "01 Apr 2027",
+    "metrics": {"activities":1206,"relationships":1876,"wbs":195,"resources":33,"assignments":572,"complete":276,"inProgress":9,"notStarted":921,"laborCrews":19,"equipment":4,"materials":10,"directLevelingDelays":31,"changedRemainingDates":222,"lookaheadRows":189},
+    "financials": {"currency":"USD","bac":5251281,"pv":923042.33,"ev":927476.92,"ac":940042.33,"etc":4328238.67,"eac":5268281,"sv":4434.59,"cv":-12565.41,"vac":-17000},
+    "finish": {"cpm":"15 Aug 2028","leveled":"16 Aug 2028","baseline":"22 Aug 2028"},
+    "presentation": "Ali_Bayoumi_Project_Controls_Case_Study.pdf",
+    "powerpoint": "Ali_Bayoumi_Project_Controls_Case_Study.pptx"
+  },
+  {"number":"02","slug":"cost-control-evm","status":"draft","template":"standard","title":"Cost Control & EVM Case Study","sections":[]},
+  {"number":"03","slug":"delay-analysis-schedule-review","status":"draft","template":"standard","title":"Delay Analysis / Schedule Review","sections":[]},
+  {"number":"04","slug":"project-controls-dashboard","status":"draft","template":"standard","title":"Excel & Power BI Project Controls Dashboard","sections":[]},
+  {"number":"05","slug":"technical-office-coordination","status":"draft","template":"standard","title":"Technical Office / Engineering Coordination","sections":[]}
+]
