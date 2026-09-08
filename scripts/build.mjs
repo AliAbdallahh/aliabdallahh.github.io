@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
@@ -28,7 +29,11 @@ function url(target) {
   if (pathname.endsWith('/')) relative += '/';
   return relative + (hash ? '#' + hash : '');
 }
-const asset = name => esc(url('/assets/' + name));
+// New CSS/JS bytes get a new URL, so repeat visitors receive layout fixes immediately.
+const assetVersions = Object.fromEntries(['site.css', 'site.js'].map(name => [name,
+  createHash('sha256').update(fs.readFileSync(path.join(dist, 'assets', name))).digest('hex').slice(0, 12)
+]));
+const asset = name => esc(url('/assets/' + name) + (assetVersions[name] ? '?v=' + assetVersions[name] : ''));
 const dl = name => esc(url('/downloads/' + name));
 const link = (href, text, cls='text-link', attrs='') => `<a class="${cls}" href="${esc(url(href))}" ${attrs}>${text}${arrow}</a>`;
 const button = (href, text, secondary=false, attrs='') => link(href, text, 'button'+(secondary?' button-secondary':''), attrs);

@@ -36,7 +36,8 @@ for(const file of pages){
  for(const m of html.matchAll(/(?:href|src)="([^"]+)"/g)){
   const ref=m[1].replace(/&amp;/g,'&');
   if(/^(https?:|mailto:|data:)/.test(ref))continue;
-  const [pathname,fragment]=ref.split('#');
+  const [pathAndQuery,fragment]=ref.split('#');
+  const pathname=pathAndQuery.split('?')[0];
   const normalized=pathname.startsWith('/')&&prefix&&pathname.startsWith(prefix+'/')?pathname.slice(prefix.length):pathname;
   let target=normalized?path.resolve(normalized.startsWith('/')?dist:path.dirname(file),normalized.replace(/^\//,'')):file;
   if(fs.existsSync(target)&&fs.statSync(target).isDirectory())target=path.join(target,'index.html');
