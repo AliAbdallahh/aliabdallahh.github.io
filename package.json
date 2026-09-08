@@ -1,0 +1,9 @@
+{
+  "name": "ali-bayoumi-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Ali Bayoumi — Planning & Project Controls Engineer",
+  "scripts": {"build":"node scripts/build.mjs", "check":"node scripts/check.mjs"},
+  "engines": {"node":">=22"}
+}

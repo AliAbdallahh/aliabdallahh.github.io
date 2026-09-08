@@ -1,0 +1,53 @@
+{
+  "name": "Ali Bayoumi",
+  "title": "Planning & Project Controls Engineer",
+  "email": "aliabdalllah95@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/ali-bayomi/",
+  "location": "Cairo, Egypt",
+  "summary": "Planning, scheduling, cost control and reporting — connecting the programme to the decisions that keep work moving.",
+  "about": "I am a Planning & Project Controls Engineer with 4+ years of experience across construction, facilities management, technical office and site execution in Egypt and Saudi Arabia. My work connects schedules, progress information and technical deliverables, with project exposure at the Daba’a Nuclear Power Plant and Shura Island / Red Sea development.",
+  "education": "Bachelor of Construction Engineering · Egyptian Russian University · 2021",
+  "languages": "Arabic: native · English: upper-intermediate",
+  "experience": [
+    {
+      "dates": "Nov 2025 – Aug 2026",
+      "role": "Technical Office Engineer",
+      "company": "Obeikan Technical Fabrics Co. Ltd.",
+      "project": "Shura Island / Red Sea development",
+      "location": "Saudi Arabia",
+      "summary": "Coordinated structural shop drawings, material take-offs, BOQs, RFIs and material submittals for fast-track works. Maintained approval and as-built records while resolving design and site interfaces."
+    },
+    {
+      "dates": "Oct 2024 – Oct 2025",
+      "role": "Technical Office & Planning Engineer",
+      "company": "El Dakkar General Contracting",
+      "project": "Daba’a Nuclear Power Plant · Units 3 & 4",
+      "location": "Egypt",
+      "summary": "Supported planning and technical office activities for Buildings 31/32 and 41/42. Tracked engineering submissions, approvals and constraints; supported progress monitoring, reporting and lookahead coordination."
+    },
+    {
+      "dates": "Mar 2023 – Oct 2024",
+      "role": "Planning Engineer",
+      "company": "Prosper Egypt Facilities Management",
+      "project": "Civil, MEP and facility-improvement works",
+      "location": "Cairo, Egypt",
+      "summary": "Developed and maintained P6 and MS Project baselines and updates. Reviewed critical paths and float, prepared lookaheads and recovery actions, and reported progress, costs and KPI/SLA performance in Excel."
+    },
+    {
+      "dates": "Dec 2021 – Dec 2022",
+      "role": "Site Engineer",
+      "company": "Horus Contracting & Real Estate Investment",
+      "project": "Civil and finishing works",
+      "location": "Cairo, Egypt",
+      "summary": "Coordinated daily site activities and progress reporting. Reviewed quantities, BOQs and contractor invoices, and supported quality inspections, snagging and technical coordination."
+    }
+  ],
+  "skills": [
+    {"group":"Planning & Scheduling","items":["Baseline schedule development","WBS & CPM","Logic and critical path analysis","Schedule updating","Lookahead & recovery planning"]},
+    {"group":"Project Controls","items":["Progress measurement","Resource loading & leveling","Earned value management","Forecasting & variance analysis","Delay analysis"]},
+    {"group":"Cost Control","items":["BOQ review & cost estimation","Budget monitoring","Resource and cost loading","Cost-performance reporting","Cash-flow reporting"]},
+    {"group":"Reporting & Analytics","items":["S-curves & resource histograms","Weekly / monthly reports","Advanced Excel & PivotTables","KPI / SLA tracking","Power BI — basic dashboards"]},
+    {"group":"Technical Office","items":["Shop drawings & RFIs","Material take-offs","Material submittals & approvals","Procurement coordination","As-built & technical records"]},
+    {"group":"Software","items":["Primavera P6","Microsoft Project","Microsoft Excel","Power BI — basic","AutoCAD"]}
+  ]
+}
