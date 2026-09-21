@@ -3,6 +3,7 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 from urllib.parse import urljoin, urlparse
 import hashlib
+import json
 import os
 import time
 
@@ -22,6 +23,13 @@ checks = {
     "assets/og.png": "assets/og.png",
     "assets/favicon.svg": "assets/favicon.svg",
 }
+projects = json.loads((root.parent / "content/projects.json").read_text())
+for project in projects:
+    if project["status"] == "published":
+        route = "projects/" + project["slug"] + "/"
+        checks[route] = route + "index.html"
+        image = "assets/" + project["image"]
+        checks[image] = image
 for route, file in checks.items():
     expected = hashlib.sha256((root / file).read_bytes()).digest()
     last_error = None

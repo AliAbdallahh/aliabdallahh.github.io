@@ -6,7 +6,16 @@ export function renderTraining({training,model,table,esc,eyebrow}) {
     <h2 id="training-title">Programme review,<br>progress and delay.</h2>
     <p class="lead">Three exercises covering the review of a contractor programme, evidence-based progress reporting and a simple prospective time-impact model.</p>
     <aside class="source-note"><strong>${esc(training.disclosure)}</strong> Slides 16–18 of the full presentation. The illustrative quantities and delay model are separate from the original P6 results.</aside>
-    <article class="training-example"><h3>Contractor Programme Review — Practice Exercise</h3>
+    ${renderProgrammeReview({training,model,table,esc})}
+    ${renderProgressVerification({training,model,table,esc})}
+    ${renderTIA({training,model,table,esc})}
+  </section>`;
+}
+
+export function renderProgrammeReview({training,model,table,esc}) {
+  const p=training.progress,t=training.tia,m=model;
+  const date=value=>new Date(value+'T00:00:00Z').toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric',timeZone:'UTC'});
+  return `    <article class="training-example"><h3>Contractor Programme Review — Practice Exercise</h3>
       <p><strong>C-01: calendar exceptions.</strong> The existing portfolio audit found no holiday exceptions for 2026–2028. This is a query to resolve with the contractor before accepting working-time assumptions.</p>
       ${table(['Review item','Comment / required action'],[
         ['Potential effect','Activities could fall on dates when crews are unavailable. The completion impact has not been quantified.'],
@@ -15,8 +24,13 @@ export function renderTraining({training,model,table,esc,eyebrow}) {
         ['Training action record','Owner: contractor planner. Due: 02 Apr 2027. Status: open pending evidence.']
       ],'Programme review comment C-01')}
       <p class="fine-print">Source finding: existing portfolio slide 12 and its notes. The review wording and response deadline are assumed. No full P6 rerun or quantified calendar delay is claimed.</p>
-    </article>
-    <article class="training-example"><h3>Progress Verification &amp; Reporting</h3>
+    </article>`;
+}
+
+export function renderProgressVerification({training,model,table,esc}) {
+  const p=training.progress,t=training.tia,m=model;
+  const date=value=>new Date(value+'T00:00:00Z').toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric',timeZone:'UTC'});
+  return `    <article class="training-example"><h3>Progress Verification &amp; Reporting</h3>
       <p>Assumed slab package: <strong>${p.scope} ${p.unit}</strong>. Reporting cut: ${p.dataDate}. Progress recognises installed and accepted concrete against the same defined scope.</p>
       ${table(['Basis','Quantity','Progress','Training evidence'],[
         ['Planned to date',`${p.planned} ${p.unit}`,`${m.progress.planned}%`,'Assumed quantity plan'],
@@ -29,8 +43,13 @@ export function renderTraining({training,model,table,esc,eyebrow}) {
         ['V-01',`${m.progress.unverified} ${p.unit} unverified`,'Site engineer: reconcile measurements and inspection records','02 Apr 2027','Open']
       ],'Training delay and verification action register')}
       <details class="method-details"><summary>Measurement basis and evidence limits</summary><p>Q-001 and IR-001 are assumed record references, not supplied signed evidence. In practice, check location-tagged daily reports, delivery tickets, measured quantities and inspection releases against one reporting cut-off. Unverified work is not automatically rejected work.</p><p>This 40% applies only to the training slab package. Whole-project progress needs documented package weights. It does not replace the original duration-based P6 EV or prove a delay to handover.</p></details>
-    </article>
-    <article class="training-example"><h3>Delay Analysis — Illustrative TIA</h3>
+    </article>`;
+}
+
+export function renderTIA({training,model,table,esc}) {
+  const p=training.progress,t=training.tia,m=model;
+  const date=value=>new Date(value+'T00:00:00Z').toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric',timeZone:'UTC'});
+  return `    <article class="training-example"><h3>Delay Analysis — Illustrative TIA</h3>
       <p>An assumed design clarification blocks installation for ${t.eventDays} working days. The model starts from a pre-event update at <strong>${date(t.dataDate)}, 08:00</strong>, with prior enabling work assumed complete and remaining work unstarted.</p>
       <p><strong>Inserted fragnet and controlling sequence</strong></p>
       <ol class="training-flow" aria-label="Impacted controlling sequence, finish-to-start links with zero lag">
@@ -49,6 +68,5 @@ export function renderTraining({training,model,table,esc,eyebrow}) {
       <p>The time-impact result can support an EOT review. Entitlement still requires the governing contract, event responsibility and supporting records. Compensation requires a separate assessment.</p>
       <p class="fine-print"><strong>Learning scope:</strong> Introductory knowledge of FIDIC-based contract procedures. Identify the form, edition and Particular Conditions before checking notices and assessment procedures. No clause number, notice period or contractual entitlement is assumed.</p>
       <p class="fine-print">Method references: ${training.sources.map(s=>`<a class="training-source" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a>`).join('; ')}.</p>
-    </article>
-  </section>`;
+    </article>`;
 }

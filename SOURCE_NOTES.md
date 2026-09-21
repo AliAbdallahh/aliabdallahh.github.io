@@ -43,8 +43,8 @@ The CV retains the supplied content, font sizes and two-page format. Its former 
 - SV = +$4,434.59; CV = −$12,565.41.
 - EAC $5,268,281.00 = AC $940,042.33 + ETC $4,328,238.67.
 - VAC = BAC $5,251,281.00 − EAC $5,268,281.00 = −$17,000.
-- One published project; four future topics remain unpublished data records.
-- Static validation checks local references, anchors, metadata, image attributes and required downloads. Production deployment and browser QA remain separate checks and have not been claimed as completed.
+- One simulated P6 programme and two published companion training studies. Cost/EVM dashboard, Excel/Power BI dashboard and technical office coordination remain unpublished data records.
+- Static validation checks local references, anchors, metadata, image attributes and required downloads. Deployment is separately checked using unauthenticated public HTTP and SHA-256 verification. Browser visual QA is recorded separately when available.
 
 ## Hosting
 
@@ -62,3 +62,11 @@ Public downloads comprise the updated CV and the explicitly requested new presen
 - Method reference: https://www.scl.org.uk/sites/default/files/documents/SCL_Delay_Protocol_2nd_Edition_Final.pdf (Part B 4.3 and 11.6(b)). Contract context: https://fidic.org/books/fidic-golden-principles-2019. No contract form, edition, notice deadline or clause is assumed for the exercise.
 
 The four original charts retain their literal category/value data. Embedded Excel snapshots were added for editability; the original deck contained no source workbooks or formulas to preserve.
+
+## Dedicated companion pages, 21 September 2026
+
+- Contractor Schedule Review reuses existing audit findings (slides 9/12) and training slides 16–17. The four selected review comments separate evidence from proposed actions. No formal acceptance, closed action or new native P6 run is implied.
+- Delay Analysis & TIA reuses slide 18 and the same calculation module. Before/after bars describe working duration; parallel documentation, calendar dates, milestone scope and contractual limitations are retained.
+- Both pages link to the same 18-slide presentation and original P6 case study. The homepage explicitly identifies their shared provenance. The original `/projects/primavera-p6-project-controls/#training` link still works.
+- `tia-training.svg` is generated from the teaching model, not a P6 screenshot. The contractor-review cover is the existing slide 12 image.
+- Employment history, CV, Power BI skill level and all presentation/PDF bytes are unchanged by this website expansion.

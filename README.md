@@ -1,6 +1,6 @@
 # Ali Bayoumi — Planning & Project Controls Portfolio
 
-A complete static portfolio for Ali Bayoumi, with four public pages, a reusable project catalogue, a detailed Primavera P6 case study and locally hosted CV/presentation downloads. No browser framework, backend, paid service, API keys, trackers or external font requests are required.
+A complete static portfolio for Ali Bayoumi, with six public pages, a reusable project catalogue, a detailed Primavera P6 case study and locally hosted CV/presentation downloads. No browser framework, backend, paid service, API keys, trackers or external font requests are required.
 
 ## Current delivery status
 
@@ -14,9 +14,11 @@ The updated **18-slide PowerPoint** is the main presentation. The PDF was export
 
 | Route | Content |
 |---|---|
-| `/` | Hero, featured project, about, career timeline, skills, CV and contact |
+| `/` | Hero, P6 project and two companion studies, about, career timeline, skills, CV and contact |
 | `/projects/` | Published project cards |
 | `/projects/primavera-p6-project-controls/` | Full illustrated case study |
+| `/projects/contractor-schedule-review/` | Programme review register, evidence and progress verification |
+| `/projects/illustrative-time-impact-analysis/` | Before/after CPM comparison, fragnet, assumptions and EOT context |
 | `/cv/` | Latest CV viewer and download |
 
 Trailing slashes provide clean directory URLs on GitHub Pages and Netlify. A dedicated `404.html` is included. No catch-all SPA rewrite is needed.
@@ -27,6 +29,9 @@ Trailing slashes provide clean directory URLs on GitHub Pages and Netlify. A ded
 - `content/projects.json`: published/draft projects, case-study metrics and download names.
 - `content/site.json`: description, latest CV filename and optional permanent HTTPS site URL.
 - `scripts/build.mjs`: shared page layout, project card, figure, table and case-study components.
+- `scripts/study-pages.mjs`: dedicated contractor-review and TIA page layouts; generated SVG teaching-model cover.
+- `scripts/training-section.mjs`: shared evidence sections, reused by the P6 appendix and companion pages.
+- `content/training.json`: disclosed assumptions for the progress and miniature CPM examples.
 - `dist/assets/site.css`: shared visual theme and responsive styles.
 - `dist/assets/site.js`: small progressive enhancement for mobile navigation.
 - `dist/assets/`: local report images, favicon and Open Graph image.
@@ -43,7 +48,7 @@ The generated HTML is committed alongside the content and renderer. The build re
 
 ### Add a future project
 
-The four requested future topics exist as **draft records only**. They produce no cards, pages or sitemap entries. To publish one:
+Cost Control & EVM Dashboard (04), Excel & Power BI Dashboard (05), and Technical Office Coordination (06) exist as **draft records only**. They produce no cards, pages or sitemap entries. To publish one:
 
 1. Add the actual project assets and presentation under `dist/assets/` and `dist/downloads/`.
 2. Fill in its record in `content/projects.json`: `summary`, `type`, `image`, `tags`, `presentation`, and `sections`.
@@ -137,8 +142,20 @@ Portfolio content and source documents belong to Ali Bayoumi. No employer logos 
 
 ## Consultant review training appendix
 
-Slides 16–18 add a programme calendar review, an assumed quantity-progress verification example and an illustrative prospective TIA. All three carry the training disclaimer. Their website counterpart is `#training` on the P6 case-study page.
+Slides 16–18 add a programme calendar review, an assumed quantity-progress verification example and an illustrative prospective TIA. All three carry the training disclaimer. Their website counterparts are two standalone companion case studies, also retained at `#training` on the P6 page so existing links still work.
 
-`content/training.json` contains assumed quantities and durations. `scripts/training-model.mjs` calculates package progress and a weekday-only miniature CPM model. `scripts/training-section.mjs` renders the evidence and interpretation. The model is separate from the 1,206-activity P6 schedule and does not revise HO-023. The four future project records remain unpublished drafts.
+`content/training.json` contains assumed quantities and durations. `scripts/training-model.mjs` calculates package progress and a weekday-only miniature CPM model. `scripts/training-section.mjs` renders the evidence and interpretation. The model is separate from the 1,206-activity P6 schedule and does not revise HO-023. The contractor review and TIA pages share the existing 18-slide presentation. They are explicitly labelled as companion training studies, not separate client engagements. Three future project records remain unpublished drafts.
 
 Training calendar: Monday–Friday, 08:00–12:00 and 13:00–17:00, no holidays. Inserting a four-working-day clarification before the controlling installation/test chain changes training handover from 21 to 27 April 2027: four working days and six calendar days. No contractual entitlement or compensation is inferred.
+
+## Publishing sequence and evidence required
+
+The published navigation follows **P6 Project Controls → Contractor Schedule Review → Delay Analysis / TIA**. The homepage shows all three, while explaining that they comprise one simulated programme and two companion training studies. Do not use the page count to imply three client projects.
+
+Next: **Cost Control & EVM Dashboard**, then **Excel & Power BI Dashboard**. Publish only after an actual, clearly scoped case study is complete:
+
+- Cost control: inspectable input data, reporting cut, WBS/cost mapping, reconciled PV/EV/AC and forecast, variance drivers, management actions, assumptions and checks. The current P6 EVM section alone is not a new independent dashboard project.
+- Power BI: an actual working report and its source model, measures, refresh instructions, reconciled totals and readable screenshots. Use the existing “basic” skill description until stronger evidence exists.
+- Each new published entry needs a substantive HTML case-study page as well as supporting downloads. No empty cards or “coming soon” projects are shown.
+
+`scripts/verify-public.py` derives published project routes and their cover assets from the catalogue and checks unauthenticated HTTP 200 responses and byte-for-byte SHA-256 equality after deployment. PPTX downloads are checked directly, not inferred from whether a text-only browsing tool can open them.
