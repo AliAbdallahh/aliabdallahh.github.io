@@ -1,0 +1,9 @@
+{
+  "disclosure": "Independent training exercise using assumed events and data; not a live contractual claim.",
+  "progress": {"scope": 400, "planned": 200, "reported": 180, "verified": 160, "unit": "m³", "dataDate": "01 Apr 2027"},
+  "tia": {"dataDate": "2027-04-05", "eventDays": 4, "installationDays": 10, "testingDays": 3, "documentationDays": 8, "milestone": "M-TR01"},
+  "sources": [
+    {"title": "SCL Delay and Disruption Protocol, 2nd edition (2017)", "url": "https://www.scl.org.uk/sites/default/files/documents/SCL_Delay_Protocol_2nd_Edition_Final.pdf"},
+    {"title": "FIDIC Golden Principles (2019)", "url": "https://fidic.org/books/fidic-golden-principles-2019"}
+  ]
+}
