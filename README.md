@@ -8,7 +8,7 @@ Source repository: [AliAbdallahh/aliabdallahh.github.io](https://github.com/AliA
 
 Production homepage: [Ali Bayoumi portfolio](https://aliabdallahh.github.io/). The included GitHub Actions workflow publishes `dist/`; verify the latest successful deployment in the repository's Actions tab before sharing a new version.
 
-The new **15-slide PowerPoint** is the main presentation. The PDF was exported from that same final PPTX. Both are under `dist/downloads/` and linked throughout the case study. The previous nine-slide deck is not served.
+The updated **18-slide PowerPoint** is the main presentation. The PDF was exported from that same final PPTX. Both are under `dist/downloads/` and linked throughout the case study. The previous nine-slide deck is not served.
 
 ## Routes
 
@@ -108,7 +108,7 @@ The P6 project is an **independent simulated portfolio case study**, not client 
 
 Source hierarchy:
 
-1. The new `Ali_Bayoumi_Project_Controls_Portfolio_2026.pptx` (15 slides).
+1. The new `Ali_Bayoumi_Project_Controls_Portfolio_2026.pptx` (18 slides).
 2. The reconciled portfolio audit and corrected presentation values.
 3. Selected images extracted from original P6 reports for source visuals. Their scales, print dates and limitations are retained and captioned. Original source-report PDFs and the internal audit are not public downloads.
 4. The latest supplied two-page CV for all professional background, job titles, dates, contact details and skill levels.
@@ -134,3 +134,11 @@ Semantic HTML; one H1 per page; skip link; keyboard focus states; labelled navig
 ## Ownership
 
 Portfolio content and source documents belong to Ali Bayoumi. No employer logos or client-owned project photographs are used. The generated Open Graph image is a branding asset, not project evidence. No open-source licence is applied to private professional documents by default.
+
+## Consultant review training appendix
+
+Slides 16–18 add a programme calendar review, an assumed quantity-progress verification example and an illustrative prospective TIA. All three carry the training disclaimer. Their website counterpart is `#training` on the P6 case-study page.
+
+`content/training.json` contains assumed quantities and durations. `scripts/training-model.mjs` calculates package progress and a weekday-only miniature CPM model. `scripts/training-section.mjs` renders the evidence and interpretation. The model is separate from the 1,206-activity P6 schedule and does not revise HO-023. The four future project records remain unpublished drafts.
+
+Training calendar: Monday–Friday, 08:00–12:00 and 13:00–17:00, no holidays. Inserting a four-working-day clarification before the controlling installation/test chain changes training handover from 21 to 27 April 2027: four working days and six calendar days. No contractual entitlement or compensation is inferred.

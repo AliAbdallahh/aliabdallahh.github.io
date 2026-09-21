@@ -4,7 +4,7 @@ Prepared 8 September 2026. Reporting model data date: 1 April 2027. The latter i
 
 ## Main presentation
 
-The delivered PPTX is a byte-for-byte copy of the final 15-slide `Ali_Bayoumi_Project_Controls_Portfolio_2026.pptx`. The PDF was exported directly from that file using LibreOffice. The 15 PDF pages were rendered and visually inspected. Slide crops on this site come from the final Office slide renders.
+The current PPTX extends the original 15-slide `Ali_Bayoumi_Project_Controls_Portfolio_2026.pptx` with three consultant-review training slides. The PDF is exported from the updated presentation. Existing slide crops on the site retain their original provenance.
 
 | Website asset | Source |
 |---|---|
@@ -34,7 +34,7 @@ The CV retains the supplied content, font sizes and two-page format. Its former 
 
 ## Validation record
 
-- New PowerPoint and PDF have 15 slides/pages; the PPTX identity matches the completed presentation.
+- Updated PowerPoint and PDF have 18 slides/pages, with three explicitly labelled training additions.
 - Employment dates, employer names, project exposure and contact details transcribed from the latest CV.
 - Activity status counts: 276 + 9 + 921 = 1,206.
 - Resource types: 19 + 4 + 10 = 33.
@@ -53,3 +53,12 @@ The connected GitHub account is AliAbdallahh. The public repository is `AliAbdal
 ## Public document scope
 
 Public downloads comprise the updated CV and the explicitly requested new presentation in PPTX/PDF formats. The detailed internal audit and standalone original P6 report PDFs are excluded from the public repository. Selected report images are included as the requested project evidence.
+
+## Training additions, 20 September 2026
+
+- Slide 16: the no-holiday-exceptions finding comes from original slide 12 speaker notes. The review request, owner and deadline are assumed. Completion impact remains unquantified pending an approved calendar and native calculation.
+- Slide 17: all quantities and evidence IDs are assumed. Scope 400 m³, plan 200, reported 180, verified 160. Physical progress is package-specific and does not replace duration-based P6 EV. No signed records are supplied.
+- Slide 18: independently calculated prospective miniature CPM at 05 Apr 2027. Prior enabling work is assumed complete. Critical remaining chain is installation 10d plus testing 3d; parallel documentation is 8d. Inserting a 4d clarification makes 13d become 17d. Both cases use identical calendars and settings. This is not a full P6 rerun or live claim.
+- Method reference: https://www.scl.org.uk/sites/default/files/documents/SCL_Delay_Protocol_2nd_Edition_Final.pdf (Part B 4.3 and 11.6(b)). Contract context: https://fidic.org/books/fidic-golden-principles-2019. No contract form, edition, notice deadline or clause is assumed for the exercise.
+
+The four original charts retain their literal category/value data. Embedded Excel snapshots were added for editability; the original deck contained no source workbooks or formulas to preserve.
